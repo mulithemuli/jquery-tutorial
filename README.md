@@ -5,6 +5,17 @@ A tutorial in several lessons to learn [jQuery](https://jquery.com/) and it's pa
 
 The examples use [Material Design](https://materializecss.com) for styling. This makes the examples look better but it also has some relation to real-world projects where the markup needs to be written as the framework requires it.
 
+Each lesson contains a link to the task itself and may provide several solutions. The solutions for each task are ranked. Although all solution will work, the first solution is the "worst" and the last solution is the "best".
+
+### Table of contents
+
+- [Preflight](#preflight)
+  - [functions and arrow functions](#functions-and-arrow-functions)
+  - [Event handlers](#event-handlers)
+  - [`var` and `let`](#var-and-let)
+- [Lesson 1](#lesson-1)
+  - [Get to the code](get-to-the-code)
+
 ## Preflight
 
 Some short things before we start with the actual tutorial.
@@ -96,8 +107,9 @@ An explanation is attached to each solution.
 
 The solutions of the first lesson are implemented with good ol' functions for IE support. But there are
 
-Get to the code
+### Get to the code
+
 - [Task](https://codepen.io/mulithemuli/pen/JjPREzX)
-- Solution #1
+- [Solution #1](https://codepen.io/mulithemuli/pen/yLBaMem)
 - Solution #2
 - Solution #3
