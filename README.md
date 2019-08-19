@@ -5,7 +5,7 @@ A tutorial in several lessons to learn [jQuery](https://jquery.com/) and it's pa
 
 The examples use [Material Design](https://materializecss.com) for styling. This makes the examples look better but it also has some relation to real-world projects where the markup needs to be written as the framework requires it.
 
-Each lesson contains a link to the task itself and may provide several solutions. The solutions for each task are ranked. Although all solution will work, the first solution is the "worst" and the last solution is the "best".
+Each lesson contains a link to the task itself and may provide several solutions. The lessons will remove comments from previous lessons to be more readable.
 
 ### Table of contents
 
@@ -13,11 +13,11 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [functions and arrow functions](#functions-and-arrow-functions)
   - [Event handlers](#event-handlers)
   - [`var` and `let`](#var-and-let)
-- [Lesson 1](#lesson-1)
+- [Lesson 1 – attaching the event handlers](#lesson-1-–-attaching-the-event-handlers)
 	 - [Get to the code](#get-to-the-code)
- - [Lesson 2](#lesson-2)
+ - [Lesson 2 – adding a counter](#lesson-2-–-adding-a-counter)
 	 - [Get to the code](#get-to-the-code-1)
- - [Lesson 3](#lesson-3)
+ - [Lesson 3 – improving the counter](#lesson-3-–-improving-the-counter)
 	 - [Get to the code](#get-to-the-code-2)
 
 ## Preflight
@@ -95,7 +95,11 @@ Unfortunately `let` is not supported in IE so far. To read more about the differ
 
 If you need to support IE, it is probably safe to replace `let` with `var`. <small>And cope with the unexpected 😈</small>
 
-## Lesson 1
+## Lesson 1 – attaching the event handlers
+
+Comes in handy
+- [Preflight / functions and arrow functions](#functions-and-arrow-functions)
+- [Preflight / Event handlers](#event-handlers)
 
 Write a script with jQuery which takes the entered text and prints it in a span below on button click.
 
@@ -108,34 +112,40 @@ It is allowed to add tags, IDs or classes. Although the existing ones must be pr
 The solution is possible without doing that.
 
 An explanation is attached to each solution.
-
-The solutions of the first lesson are implemented with good ol' functions for IE support. But there are
+The solutions are ranked. Although all solutions will work, the first solution is the "worst" and the last solution is the "best".
 
 ### Get to the code
 
-- [Task](https://codepen.io/mulithemuli/pen/JjPREzX)
+- [Task – attaching the event handlers](https://codepen.io/mulithemuli/pen/JjPREzX)
 - [Solution #1](https://codepen.io/mulithemuli/pen/yLBaMem)
 - [Solution #2](https://codepen.io/mulithemuli/pen/pozEPGd)
 - [Solution #3](https://codepen.io/mulithemuli/pen/WNeGOxX)
 
-## Lesson 2
+## Lesson 2 – adding a counter
 
 Print the number of times the button has been clicked to the bottom of the page in a specified container.
+
+Covered in this lesson
+- Using local variables
+- basic DOM manipulation
 
 The area where the number of times clicked is defined. This lesson is based on the third solution of lesson 1. Comments from the previous solution have been removed in the task and the script has been reduced to a minimum.
 
 ### Get to the code
 
-- [Task](https://codepen.io/mulithemuli/pen/WNeGOaK)
+- [Task - adding the counter](https://codepen.io/mulithemuli/pen/WNeGOaK)
 - [Solution #1](https://codepen.io/mulithemuli/pen/bGbwROK)
 
-## Lesson 3
+## Lesson 3 – improving the counter
 
 Only updating the number of counts when the text actually has changed.
+
+Covered in this lesson
+- typesafe comparisons
 
 The change will be determined as previously but we need to check if the text has been changed.
 
 ### Get to the code
 
-- [Task](https://codepen.io/mulithemuli/pen/vYBXZMZ)
+- [Task - improving the counter](https://codepen.io/mulithemuli/pen/vYBXZMZ)
 - [Solution #1](https://codepen.io/mulithemuli/pen/VwZKWOp)
