@@ -170,8 +170,8 @@ When JavaScript is active we would like to remove the button from the view but t
 
 ### Get to the code
 
-- Task – removing the buttons
-- Solution
+- [Task – removing the buttons](https://codepen.io/mulithemuli/pen/VwZKWOp) (same as the solution from lesson 3)
+- [Solution](https://codepen.io/mulithemuli/pen/XWrjayp)
 
 ## Lesson 5 – reusability / marker class
 
