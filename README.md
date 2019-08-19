@@ -111,5 +111,5 @@ The solutions of the first lesson are implemented with good ol' functions for IE
 
 - [Task](https://codepen.io/mulithemuli/pen/JjPREzX)
 - [Solution #1](https://codepen.io/mulithemuli/pen/yLBaMem)
-- Solution #2
-- Solution #3
+- [Solution #2](https://codepen.io/mulithemuli/pen/pozEPGd)
+- [Solution #3](https://codepen.io/mulithemuli/pen/WNeGOxX)
