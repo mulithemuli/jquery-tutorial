@@ -72,6 +72,14 @@ This can come in handy when using jQuery [`.off()`](https://api.jquery.com/off/)
 - The `.click()` function is defined by jQuery. Which means we cannot minify the name of this function called. But when using the name of the function it can be stored in a constant. The name of the constant can be minified and so we reduce the amount of characters in our script
 - With `.on()` we can delegate events to specific elements inside a specific context. But this will be covered in an extra lesson later on
 
+### `var` and `let`
+
+The tutorials will make use of the `let` keyword to store local variables.
+
+Unfortunately `let` is not supported in IE so far. To read more about the differences try [this excellent MDN page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let).
+
+If you need to support IE, it is probably safe to replace `let` with `var`. <small>And cope with the unexpected 😈</small>
+
 ## Lesson 1
 
 Write a script with jQuery which takes the entered text and prints it in the DIV below.
