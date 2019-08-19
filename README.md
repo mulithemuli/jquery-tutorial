@@ -14,7 +14,7 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [Event handlers](#event-handlers)
   - [`var` and `let`](#var-and-let)
 - [Lesson 1](#lesson-1)
-  - [Get to the code](get-to-the-code)
+  - [Get to the code](#get-to-the-code)
 
 ## Preflight
 
