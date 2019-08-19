@@ -160,7 +160,7 @@ The change will be determined as previously but we need to check if the text has
 
 ## Lesson 4 – removing the buttons
 
-The buttons are useful but relevant to every user. We would like to hide (but not remove) the buttons and delegate the change of an input to the click of the button.
+The buttons are useful but not necessarily relevant to every user. We would like to hide (but not remove) the buttons and delegate the change of an input to the click of the button.
 
 Covered in this lesson
 - event delegation
