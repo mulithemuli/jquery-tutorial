@@ -9,7 +9,7 @@ The examples use [Material Design](https://materializecss.com) for styling. This
 
 Some short things before we start with the actual tutorial.
 
-### functions and arrow functions
+### [functions and arrow functions](https://codepen.io/mulithemuli/pen/yLBaMjY)
 
 A short difference between functions and [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) in JavaScript in relation to jQuery.
 
@@ -54,7 +54,23 @@ In the following lessons we will use the arrow functions. But after this chapter
 
 ### Event handlers
 
+In the following tutorials we will bind the event handlers with the jQuery [`.on()`](https://api.jquery.com/on/) function. But there is a shorter way to bind these event handlers for the common events.
 
+    $('button').on('click', () => console.log('do something'));
+
+can be written as
+
+    $('button').click(() => console.log('do something'));
+
+jQuery states in its [.click() documentation](https://api.jquery.com/click/) that this is 
+> a shortcut for `.on( "click", handler )`
+
+So why do we use the first variant?
+
+- We can add a namespace to the event – like `'click.justMyNamespace'`.
+This can come in handy when using jQuery [`.off()`](https://api.jquery.com/off/) function to just remove specific events
+- The `.click()` function is defined by jQuery. Which means we cannot minify the name of this function called. But when using the name of the function it can be stored in a constant. The name of the constant can be minified and so we reduce the amount of characters in our script
+- With `.on()` we can delegate events to specific elements inside a specific context. But this will be covered in an extra lesson later on
 
 ## Lesson 1
 
