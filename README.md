@@ -14,7 +14,11 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [Event handlers](#event-handlers)
   - [`var` and `let`](#var-and-let)
 - [Lesson 1](#lesson-1)
-  - [Get to the code](#get-to-the-code)
+	 - [Get to the code](#get-to-the-code)
+ - [Lesson 2](#lesson-2)
+	 - [Get to the code](#get-to-the-code-1)
+ - [Lesson 3](#lesson-3)
+	 - [Get to the code](#get-to-the-code-2)
 
 ## Preflight
 
@@ -93,7 +97,7 @@ If you need to support IE, it is probably safe to replace `let` with `var`. <sma
 
 ## Lesson 1
 
-Write a script with jQuery which takes the entered text and prints it in a span below.
+Write a script with jQuery which takes the entered text and prints it in a span below on button click.
 
 Covered in this Lesson
 - jQuery Selectors
@@ -113,3 +117,25 @@ The solutions of the first lesson are implemented with good ol' functions for IE
 - [Solution #1](https://codepen.io/mulithemuli/pen/yLBaMem)
 - [Solution #2](https://codepen.io/mulithemuli/pen/pozEPGd)
 - [Solution #3](https://codepen.io/mulithemuli/pen/WNeGOxX)
+
+## Lesson 2
+
+Print the number of times the button has been clicked to the bottom of the page in a specified container.
+
+The area where the number of times clicked is defined. This lesson is based on the third solution of lesson 1. Comments from the previous solution have been removed in the task and the script has been reduced to a minimum.
+
+### Get to the code
+
+- [Task](https://codepen.io/mulithemuli/pen/WNeGOaK)
+- [Solution #1](https://codepen.io/mulithemuli/pen/bGbwROK)
+
+## Lesson 3
+
+Only updating the number of counts when the text actually has changed.
+
+The change will be determined as previously but we need to check if the text has been changed.
+
+### Get to the code
+
+- [Task](https://codepen.io/mulithemuli/pen/vYBXZMZ)
+- [Solution #1](https://codepen.io/mulithemuli/pen/VwZKWOp)
