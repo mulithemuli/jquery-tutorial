@@ -93,7 +93,7 @@ If you need to support IE, it is probably safe to replace `let` with `var`. <sma
 
 ## Lesson 1
 
-Write a script with jQuery which takes the entered text and prints it in the DIV below.
+Write a script with jQuery which takes the entered text and prints it in a span below.
 
 Covered in this Lesson
 - jQuery Selectors
