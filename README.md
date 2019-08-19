@@ -13,11 +13,11 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [functions and arrow functions](#functions-and-arrow-functions)
   - [Event handlers](#event-handlers)
   - [`var` and `let`](#var-and-let)
-- [Lesson 1 – attaching the event handlers](#lesson-1-–-attaching-the-event-handlers)
+- [Lesson 1 – attaching the event handlers](#lesson-1--attaching-the-event-handlers)
 	 - [Get to the code](#get-to-the-code)
- - [Lesson 2 – adding a counter](#lesson-2-–-adding-a-counter)
+ - [Lesson 2 – adding a counter](#lesson-2--adding-a-counter)
 	 - [Get to the code](#get-to-the-code-1)
- - [Lesson 3 – improving the counter](#lesson-3-–-improving-the-counter)
+ - [Lesson 3 – improving the counter](#lesson-3--improving-the-counter)
 	 - [Get to the code](#get-to-the-code-2)
 
 ## Preflight
