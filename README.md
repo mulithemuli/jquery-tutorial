@@ -5,7 +5,7 @@ A tutorial in several lessons to learn [jQuery](https://jquery.com/) and it's pa
 
 The examples use [Material Design](https://materializecss.com) for styling. This makes the examples look better but it also has some relation to real-world projects where the markup needs to be written as the framework requires it.
 
-Each lesson contains a link to the task itself and may provide several solutions. The lessons will remove comments from previous lessons to be more readable.
+Each lesson contains a link to the task itself and may provide several solutions. The lessons will remove comments from previous lessons to be more readable. Each solution has an explanation why this approach has been chosen. Comments of previous solutions will be removed in the upcoming tasks and solutions.
 
 ### Table of contents
 
@@ -120,7 +120,7 @@ It is allowed to add tags, IDs or classes. Although the existing ones must be pr
 The solution is possible without doing that.
 
 An explanation is attached to each solution.
-The solutions are ranked. Although all solutions will work, the first solution is the "worst" and the last solution is the "best".
+In this tutorial the solutions are ranked. Although all solutions will work, the first solution is the "worst" and the last solution is the "best". This has been done to provide the approach to the solution. Further lessons will base on the third solution.
 
 ### Get to the code
 
@@ -137,12 +137,12 @@ Covered in this lesson
 - Using local variables
 - basic DOM manipulation
 
-The area where the number of times clicked is defined. This lesson is based on the third solution of lesson 1. Comments from the previous solution have been removed in the task and the script has been reduced to a minimum.
+The area where the number of times clicked is defined. Local variable storage in the script has been reduced to a minimum.
 
 ### Get to the code
 
 - [Task – adding the counter](https://codepen.io/mulithemuli/pen/WNeGOaK)
-- [Solution #1](https://codepen.io/mulithemuli/pen/bGbwROK)
+- [Solution](https://codepen.io/mulithemuli/pen/bGbwROK)
 
 ## Lesson 3 – improving the counter
 
@@ -156,7 +156,7 @@ The change will be determined as previously but we need to check if the text has
 ### Get to the code
 
 - [Task – improving the counter](https://codepen.io/mulithemuli/pen/vYBXZMZ)
-- [Solution #1](https://codepen.io/mulithemuli/pen/VwZKWOp)
+- [Solution](https://codepen.io/mulithemuli/pen/VwZKWOp)
 
 ## Lesson 4 – removing the buttons
 
@@ -171,7 +171,7 @@ When JavaScript is active we would like to remove the button from the view but t
 ### Get to the code
 
 - Task – removing the buttons
-- Solution #1
+- Solution
 
 ## Lesson 5 – reusability / marker class
 
@@ -188,7 +188,7 @@ Covered in this lesson
 ### Get to the code
 
 - Task – reusability / marker class
-- Solution #1
+- Solution
 
 ## Lesson 6 – reusability / only once
 
@@ -200,7 +200,7 @@ Covered in this lesson
 ### Get to the code
 
 - Task – reusability / only once
-- Solution #1
+- Solution
 
 ## Lesson 7 – making a jQuery plugin
 
@@ -212,4 +212,4 @@ Covered in this lesson
 ### Get to the code
 
 - Task – making a jQuery plugin
-- Solution #1
+- Solution
