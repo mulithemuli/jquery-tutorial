@@ -26,7 +26,7 @@ Each lesson contains a link to the task itself and may provide several solutions
 - [Chapter two – tables](#chapter-two--tables)
   - [Lesson 1 – creating the table](#lesson-1--creating-the-table)
   - [Lesson 2 – enabling the inputs](#lesson-2--enabling-the-inputs)
-  - [Lesson 3 – calculating the amounts](#lesson-3--calculating-the-amounts)
+  - [Lesson 3 – calculating the amount](#lesson-3--calculating-the-amount)
 
 ## Preflight
 
