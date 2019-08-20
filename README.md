@@ -194,11 +194,13 @@ We can now select specific sections of the page to be handled as we like. But wh
 
 Covered in this lesson
 - remember marker classes
+- using the jQuery [`.not()`](https://api.jquery.com/not/) filter
 
 #### Get to the code
 
-- Task – reusability / only once
-- Solution
+- [Task – reusability / only once](https://codepen.io/mulithemuli/pen/ExYgqXK)
+- [Solution #1](https://codepen.io/mulithemuli/pen/xxKEvyd) (incomplete)
+- [Solution #2](https://codepen.io/mulithemuli/pen/wvwowra)
 
 ### Lesson 7 – making a jQuery plugin
 
