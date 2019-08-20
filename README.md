@@ -99,11 +99,51 @@ If you need to support IE, it is probably safe to replace `let` with `var`. <sma
 
 ### Anonymous self calling functions
 
+These are functions which are defined and called inline in the same place. One would ask: "why do I need them then?".
 
+The answer to this question is simple: functions define their own namespace in javascript ("`closure scope`"). They as well have the advantage to allow variables to be passed. This allows us to be certain that a variable does not get changed inside the function if we do not change it ourselves.
+
+    var foo = 'bar';
+    var bar = function() {
+      // do something
+    };
+
+will be declared on the global scope which would be the window most likely.
+Hiding it inside an anonymous function won't do that. And the anonymous function itself is – anonymous and therefore not visible on the window scope as well.
+
+    (function() {
+      var foo = 'bar';
+      var bar = function() {
+        // do something
+      };
+    }());
+
+Here the variables `foo` and `bar` are only known inside our anonymous function.
+
+As said above arguments can be passed as well. We use this to protect our variables.
+
+    (function($, undefined) {
+      // do something
+    }(jQuery));
+
+In this example we use the shortcut `$` for jQuery. This prevents other plugins which might override the dollar variable. And we use `undefined` as a "variable" but not pass it as argument. So we can be sure that the keyword `undefined` is actually undefined. Why do we need the undefined part? Javascript allows some ugly things like `var undefined = 'foo';` where `undefined` becomes defined.
+
+It is recommended to write every custom Javascript inside an anonymous function to not pollute the global scope and possibly get conflicts with other functions or variables with the same name. Everything which should be accessible from the window scope can be passed as argument.
+
+    (function(myNamespace, undefined) {
+      var text = 'yay';
+      myNamespace.doStuff = () => console.log(text);
+    }(window.myNamespace = window.myNamespace || {}));
+    
+    myNamespace.doStuff(); // writes 'yay' to the console
+    console.log(myNamespace.text); // writes 'undefined' to the console since 'text' is not visible here.
+
+What is done here is to pass the `myNamespace` object to the function. If `myNamespace` is not yet defined it will be defined by `window.myNamespace = window.myNamespace || {}` (the `or` does that). And the window will store the reference to our object.
 
 ## Chapter one – basics
 
 In this chapter we well learn the basics of jQuery selectors and event handlers.
+All the lessons are in a [CodePen collection](https://codepen.io/collection/AZEWGz/).
 
 ### Lesson 1 – attaching the event handlers
 
