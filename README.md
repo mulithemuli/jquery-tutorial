@@ -185,8 +185,8 @@ Covered in this lesson
 
 #### Get to the code
 
-- Task – reusability / marker class
-- Solution
+- [Task – reusability / marker class](https://codepen.io/mulithemuli/pen/KKPgjeB)
+- [Solution](https://codepen.io/mulithemuli/pen/NWKRZOY)
 
 ### Lesson 6 – reusability / only once
 
