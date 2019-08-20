@@ -13,6 +13,8 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [functions and arrow functions](#functions-and-arrow-functions)
   - [Event handlers](#event-handlers)
   - [`var` and `let`](#var-and-let)
+  - [anonymous self calling functions](#anonymous-self-calling-functions)
+  - [event delegation](#event-delegation)
 - [Chapter one – basics](#chapter-one--basics)
   - [Lesson 1 – attaching the event handlers](#lesson-1--attaching-the-event-handlers)
    - [Lesson 2 – adding a counter](#lesson-2--adding-a-counter)
@@ -21,6 +23,9 @@ Each lesson contains a link to the task itself and may provide several solutions
    - [Lesson 5 – reusability / marker class](#lesson-5--reusability--marker-class)
    - [Lesson 6 – reusability / only once](#lesson-6--reusability--only-once)
    - [Lesson 7 – making a jQuery plugin](#lesson-7--making-a-jquery-plugin)
+- [Chapter two – tables](#chapter-two--tables)
+  - [Lesson 1 – creating the table](#lesson-1--creating-the-table)
+  - [Lesson 2 – enabling the inputs](#lesson-2--enabling-the-inputs)
 
 ## Preflight
 
@@ -139,6 +144,24 @@ It is recommended to write every custom Javascript inside an anonymous function 
     console.log(myNamespace.text); // writes 'undefined' to the console since 'text' is not visible here.
 
 What is done here is to pass the `myNamespace` object to the function. If `myNamespace` is not yet defined it will be defined by `window.myNamespace = window.myNamespace || {}` (the `or` does that). And the window will store the reference to our object.
+
+### Event delegation
+
+jQuery allows us to apply event handlers in multiple ways. The most common usage is to add them on specific elements
+
+    <div id="container">
+      <span>foo</span>
+      <span>bar</span>
+      <span>baz</span>
+    </div>
+    
+    $('input', '#container').on('click', e => console.log($(e.currentTarget).text()));
+
+The code above will apply the event handler to each of the `span` elements inside our container. This means that when we have many children the event handler will be added very many times. But we can also use
+
+    $('#container').on('click', 'span', e => console.log($(e.currentTarget).text()));
+
+to get the same result. With this solution the event handler will get attached only to the container and checks which element in it has caused the event. We reduce the event handlers attached and do not need to reattach events when the DOM inside the container has been changed.
 
 ## Chapter one – basics
 
@@ -262,3 +285,39 @@ Covered in this lesson
 
 - [Task – making a jQuery plugin](https://codepen.io/mulithemuli/pen/ZEzBzPv)
 - [Solution](https://codepen.io/mulithemuli/pen/OJLbLGM)
+
+## Chapter two – tables
+
+In this chapter we will create a table which supports some click actions to modify inputs.
+The table itself has one column which contains a table itself. Each of the rows can be enabled for editing by a checkbox. There are additional checkboxes which allow the selection of all subtable entries in one row and one checkbox to enable all rows of the table and subtable.
+
+### Lesson 1 – creating the table
+
+This lesson has no task. It just shows how we create the table.
+
+We pretend that the server sends the inputs enabled but we want to enable them when the checkbox gets enabled. So the inputs need to be disabled at first.
+
+Covered in this lesson
+- creating the table as the server would provide it
+- applying some Material Design table classes to it
+
+#### Get to the code
+
+- [Task and Solution – creating the table](https://codepen.io/mulithemuli/pen/vYByEYm)
+
+### Lesson 2 – enabling the inputs
+
+Comes in handy
+- [Preflight / event delegation](#event-delegation)
+
+When the checkbox of the inner table is enabled we want to enable the input field and write the amount of the row to it. This solution uses the event delegation to add the event listener not to every checkbox but only once to the table and delegate the event to the changed checkbox.
+
+Covered in this lesson
+- Performing actions on checkbox changes
+- Reading and writing values
+- Event delegation
+
+#### Get to the code
+
+- [Task – enable the input fields](https://codepen.io/mulithemuli/pen/WNeovwb)
+- Solution
