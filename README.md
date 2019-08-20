@@ -97,6 +97,10 @@ Unfortunately `let` is not supported in IE so far. To read more about the differ
 
 If you need to support IE, it is probably safe to replace `let` with `var`. <small>And cope with the unexpected 😈</small>
 
+### Anonymous self calling functions
+
+
+
 ## Chapter one – basics
 
 In this chapter we well learn the basics of jQuery selectors and event handlers.
@@ -204,12 +208,17 @@ Covered in this lesson
 
 ### Lesson 7 – making a jQuery plugin
 
-It is a solution which can be used by more than just us? To make it more convenient for the users we would like to create a jQuery plugin which does all this covered before.
+Comes in handy
+- [Preflight / anonymous self calling functions](#anonymous-self-calling-functions)
+
+Is it a solution which can be used by more than just us? To make it more convenient for the users we would like to create a jQuery plugin which does all this covered before.
+This is a very basic jQuery plugin without options or methods to call. It just explains the basics. Making more advanced plugins will be covered in later lessons.
 
 Covered in this lesson
 - basic jQuery Plugin creation
+- anonymous self calling functions
 
 #### Get to the code
 
-- Task – making a jQuery plugin
-- Solution
+- [Task – making a jQuery plugin](https://codepen.io/mulithemuli/pen/ZEzBzPv)
+- [Solution](https://codepen.io/mulithemuli/pen/OJLbLGM)
