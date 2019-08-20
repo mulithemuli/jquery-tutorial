@@ -26,6 +26,7 @@ Each lesson contains a link to the task itself and may provide several solutions
 - [Chapter two – tables](#chapter-two--tables)
   - [Lesson 1 – creating the table](#lesson-1--creating-the-table)
   - [Lesson 2 – enabling the inputs](#lesson-2--enabling-the-inputs)
+  - [Lesson 3 – calculating the amounts](#lesson-3--calculating-the-amounts)
 
 ## Preflight
 
@@ -320,4 +321,21 @@ Covered in this lesson
 #### Get to the code
 
 - [Task – enable the input fields](https://codepen.io/mulithemuli/pen/WNeovwb)
+- [Solution](https://codepen.io/mulithemuli/pen/gOYLpry)
+
+### Lesson 3 – calculating the amount
+
+When the input gets enabled or disabled we have to update the total amount which is displayed above the table. This should also be done when the input has changed. For user convenience we would like to display the amount formatted but remove the format when the input is focused. Disclaimer: we use the German notation for numbers.
+
+We will use [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) to format the numbers. The input type is still text as some browsers or frameworks can't handle other types. But there are other Javascript plugins to constrain the input of some fields which could be applied here as well.
+
+Covered in this lesson
+- handling change events
+- modify values on actions
+- formatting numbers
+- calculations
+
+#### Get to the code
+
+- Task – calculating amounts
 - Solution
