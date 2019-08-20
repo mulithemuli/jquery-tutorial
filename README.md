@@ -13,20 +13,14 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [functions and arrow functions](#functions-and-arrow-functions)
   - [Event handlers](#event-handlers)
   - [`var` and `let`](#var-and-let)
-- [Lesson 1 – attaching the event handlers](#lesson-1--attaching-the-event-handlers)
-	 - [Get to the code](#get-to-the-code)
- - [Lesson 2 – adding a counter](#lesson-2--adding-a-counter)
-	 - [Get to the code](#get-to-the-code-1)
- - [Lesson 3 – improving the counter](#lesson-3--improving-the-counter)
-	 - [Get to the code](#get-to-the-code-2)
- - [Lesson 4 – removing the buttons](#lesson-4--removing-the-buttons)
-	 - [Get to the code](#get-to-the-code-3)
- - [Lesson 5 – reusability / marker class](#lesson-5--reusability--marker-class)
-	 - [Get to the code](#get-to-the-code-4)
- - [Lesson 6 – reusability / only once](#lesson-6--reusability--only-once)
-	 - [Get to the code](#get-to-the-code-5)
- - [Lesson 7 – making a jQuery plugin](#lesson-7--making-a-jquery-plugin)
-	 - [Get to the code](#get-to-the-code-6)
+- [Chapter one – basics](#chapter-one--basics)
+  - [Lesson 1 – attaching the event handlers](#lesson-1--attaching-the-event-handlers)
+   - [Lesson 2 – adding a counter](#lesson-2--adding-a-counter)
+   - [Lesson 3 – improving the counter](#lesson-3--improving-the-counter)
+   - [Lesson 4 – removing the buttons](#lesson-4--removing-the-buttons)
+   - [Lesson 5 – reusability / marker class](#lesson-5--reusability--marker-class)
+   - [Lesson 6 – reusability / only once](#lesson-6--reusability--only-once)
+   - [Lesson 7 – making a jQuery plugin](#lesson-7--making-a-jquery-plugin)
 
 ## Preflight
 
@@ -103,7 +97,11 @@ Unfortunately `let` is not supported in IE so far. To read more about the differ
 
 If you need to support IE, it is probably safe to replace `let` with `var`. <small>And cope with the unexpected 😈</small>
 
-## Lesson 1 – attaching the event handlers
+## Chapter one – basics
+
+In this chapter we well learn the basics of jQuery selectors and event handlers.
+
+### Lesson 1 – attaching the event handlers
 
 Comes in handy
 - [Preflight / functions and arrow functions](#functions-and-arrow-functions)
@@ -122,14 +120,14 @@ The solution is possible without doing that.
 An explanation is attached to each solution.
 In this tutorial the solutions are ranked. Although all solutions will work, the first solution is the "worst" and the last solution is the "best". This has been done to provide the approach to the solution. Further lessons will base on the third solution.
 
-### Get to the code
+#### Get to the code
 
 - [Task – attaching the event handlers](https://codepen.io/mulithemuli/pen/JjPREzX)
 - [Solution #1](https://codepen.io/mulithemuli/pen/yLBaMem)
 - [Solution #2](https://codepen.io/mulithemuli/pen/pozEPGd)
 - [Solution #3](https://codepen.io/mulithemuli/pen/WNeGOxX)
 
-## Lesson 2 – adding a counter
+### Lesson 2 – adding a counter
 
 Print the number of times the button has been clicked to the bottom of the page in a specified container.
 
@@ -139,12 +137,12 @@ Covered in this lesson
 
 The area where the number of times clicked is defined. Local variable storage in the script has been reduced to a minimum.
 
-### Get to the code
+#### Get to the code
 
 - [Task – adding the counter](https://codepen.io/mulithemuli/pen/WNeGOaK)
 - [Solution](https://codepen.io/mulithemuli/pen/bGbwROK)
 
-## Lesson 3 – improving the counter
+### Lesson 3 – improving the counter
 
 Only updating the number of counts when the text actually has changed.
 
@@ -153,12 +151,12 @@ Covered in this lesson
 
 The change will be determined as previously but we need to check if the text has been changed.
 
-### Get to the code
+#### Get to the code
 
 - [Task – improving the counter](https://codepen.io/mulithemuli/pen/vYBXZMZ)
 - [Solution](https://codepen.io/mulithemuli/pen/VwZKWOp)
 
-## Lesson 4 – removing the buttons
+### Lesson 4 – removing the buttons
 
 The buttons are useful but not necessarily relevant to every user. We would like to hide (but not remove) the buttons and delegate the change of an input to the click of the button.
 
@@ -168,12 +166,12 @@ Covered in this lesson
 
 When JavaScript is active we would like to remove the button from the view but trigger its click action when the input has been changed.
 
-### Get to the code
+#### Get to the code
 
 - [Task – removing the buttons](https://codepen.io/mulithemuli/pen/VwZKWOp) (same as the solution from lesson 3)
 - [Solution](https://codepen.io/mulithemuli/pen/XWrjayp)
 
-## Lesson 5 – reusability / marker class
+### Lesson 5 – reusability / marker class
 
 Comes in handy
 - [Preflight / functions and arrow functions](#functions-and-arrow-functions)
@@ -185,31 +183,31 @@ Covered in this lesson
 - event delegation
 - jQuery [`.each()`](https://api.jquery.com/each/) function
 
-### Get to the code
+#### Get to the code
 
 - Task – reusability / marker class
 - Solution
 
-## Lesson 6 – reusability / only once
+### Lesson 6 – reusability / only once
 
 We can now select specific sections of the page to be handled as we like. But what if the DOM gets updated by an event like an AJAX call? The new DOM should get the same event handling as the other parts but the existing parts should not get the same events attached twice.
 
 Covered in this lesson
 - remember marker classes
 
-### Get to the code
+#### Get to the code
 
 - Task – reusability / only once
 - Solution
 
-## Lesson 7 – making a jQuery plugin
+### Lesson 7 – making a jQuery plugin
 
 It is a solution which can be used by more than just us? To make it more convenient for the users we would like to create a jQuery plugin which does all this covered before.
 
 Covered in this lesson
 - basic jQuery Plugin creation
 
-### Get to the code
+#### Get to the code
 
 - Task – making a jQuery plugin
 - Solution
