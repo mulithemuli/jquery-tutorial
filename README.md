@@ -26,7 +26,8 @@ Each lesson contains a link to the task itself and may provide several solutions
 - [Chapter two – tables](#chapter-two--tables)
   - [Lesson 1 – creating the table](#lesson-1--creating-the-table)
   - [Lesson 2 – enabling the inputs](#lesson-2--enabling-the-inputs)
-  - [Lesson 3 – calculating the amount](#lesson-3--calculating-the-amount)
+  - [Lesson 3 – calculating the amount #1](#lesson-3--calculating-the-amount-1)
+  - [Lesson 4 – calculating the amount #2](#lesson-4--calculating-the-amount-2)
 
 ## Preflight
 
@@ -323,21 +324,38 @@ Covered in this lesson
 - [Task – enable the input fields](https://codepen.io/mulithemuli/pen/WNeovwb)
 - [Solution](https://codepen.io/mulithemuli/pen/gOYLpry)
 
-### Lesson 3 – calculating the amount
+### Lesson 3 – calculating the amount #1
 
-When the input gets enabled or disabled we have to update the total amount which is displayed above the table. This should also be done when the input has changed. For user convenience we would like to display the amount formatted but remove the format when the input is focused. Disclaimer: we use the German notation for numbers.
+When the input gets enabled or disabled we have to update the total amount which is displayed above the table. Disclaimer: we use the German notation for numbers.
 
-We will use [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) to format the numbers. The input type is still text as some browsers or frameworks can't handle other types. But there are other Javascript plugins to constrain the input of some fields which could be applied here as well.
+We will use [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) to format the numbers. The input type is still text as some browsers or frameworks can't handle other types. But there are other Javascript plugins to constrain the input of some fields which could be applied here as well.
 
-Regular expressions will be used here to replace some characters when the input has been focused. [RegEx Pal](https://www.regexpal.com/) is a good page to test the expressions.
+Regular expressions will be used here to replace some characters before the calculation will be made. [RegEx Pal](https://www.regexpal.com/) is a good page to test the expressions.
 
 Covered in this lesson
-- handling change events
-- modify values on actions
-- formatting numbers (even with regex)
+- handling change events (for the checkboxes)
+- formatting inputs with RegEx
+- formatting numbers with `Intl.NumberFormat`
 - calculations
 
 #### Get to the code
 
-- Task – calculating amounts
-- Solution
+- [Task – calculating amounts](https://codepen.io/mulithemuli/pen/BaBppVp)
+- [Solution](https://codepen.io/mulithemuli/pen/ZEzLLRR)
+
+### Lesson 4 – calculating the amount #2
+
+The total amount gets updated when we change the checkbox. But when the input gets changed nothing happens. We would like to add a handler which removes the format from the numbers in the inputs when focused. After the change has been made the number in the input should be formatted again. Disclaimer: we still use the German notation for numbers.
+
+The calculation should be performed on every change but invalid inputs (like with letters) should be ignored in the calculation (as if the input is zero).
+
+Covered in this lesson
+- handling change events (for the inputs)
+- modify values on actions
+- formatting numbers with RegEx
+- formatting numbers with `Intl.NumberFormat`
+
+#### Get to the code
+
+- [Task – calculating amounts with user inputs](https://codepen.io/mulithemuli/pen/LYPxWVV)
+- [Solution](https://codepen.io/mulithemuli/pen/YzKNZXW)
