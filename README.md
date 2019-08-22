@@ -28,6 +28,8 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [Lesson 2 – enabling the inputs](#lesson-2--enabling-the-inputs)
   - [Lesson 3 – calculating the amount #1](#lesson-3--calculating-the-amount-1)
   - [Lesson 4 – calculating the amount #2](#lesson-4--calculating-the-amount-2)
+  - [Lesson 5 – enabling the row checkboxes](#lesson-5--enabling-the-row-checkboxes)
+  - [Lesson 6 – enabling the global checkbox](#lesson-6--enabling-the-global-checkbox)
 
 ## Preflight
 
@@ -359,3 +361,36 @@ Covered in this lesson
 
 - [Task – calculating amounts with user inputs](https://codepen.io/mulithemuli/pen/LYPxWVV)
 - [Solution](https://codepen.io/mulithemuli/pen/YzKNZXW)
+
+### Lesson 5 – enabling the row checkboxes
+
+As for now we have only focused on the innermost checkboxes and amounts. Now we would like to enable or disable the entire inner table when the row checkbox is changed.
+
+When one of the innermost checkboxes is enabled the row checkbox should get checked as well. And when the row checkbox is checked every checkbox inside the row should be checked. If it is disabled everything inside should be disabled.
+
+When the last inner checkbox becomes disabled the row checkbox needs to be disabled as well. Of course the total amount should be calculated here as well.
+
+Covered in this lesson
+- event delegation
+- triggering events
+
+#### Get to the code
+
+- [Task – handling row checkbox changes](https://codepen.io/mulithemuli/pen/xxKgqpZ)
+- [Solution](https://codepen.io/mulithemuli/pen/gOYgmoo)
+
+### Lesson 6 – enabling the global checkbox
+
+Same task as in lesson 5 but now for the global checkbox.
+
+Since some of the functions will be used multiple times we would like to store them in variables to define them only once.
+
+Covered in this lesson
+- event delegation
+- triggering events
+- refactoring to reduce code duplication
+
+#### Get to the code
+
+- [Task – handling the global checkbox](https://codepen.io/mulithemuli/pen/gOYgmNK)
+- [Solution](https://codepen.io/mulithemuli/pen/xxKgqvg)
