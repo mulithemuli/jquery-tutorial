@@ -30,6 +30,8 @@ Each lesson contains a link to the task itself and may provide several solutions
   - [Lesson 4 – calculating the amount #2](#lesson-4--calculating-the-amount-2)
   - [Lesson 5 – enabling the row checkboxes](#lesson-5--enabling-the-row-checkboxes)
   - [Lesson 6 – enabling the global checkbox](#lesson-6--enabling-the-global-checkbox)
+ - [Chapter three – more tables](#chapter-three--more-tables)
+	 - [Lesson 1 – group amounts](#lesson-1--group-amounts)
 
 ## Preflight
 
@@ -98,13 +100,13 @@ This can come in handy when using jQuery [`.off()`](https://api.jquery.com/off/)
 - The `.click()` function is defined by jQuery. Which means we cannot minify the name of this function called. But when using the name of the function it can be stored in a constant. The name of the constant can be minified and so we reduce the amount of characters in our script
 - With `.on()` we can delegate events to specific elements inside a specific context. But this will be covered in an extra lesson later on
 
-### `var` and `let`
+### `var`, `let` and `const`
 
-The tutorials will make use of the `let` keyword to store local variables.
+The tutorials will make use of the `let` or `const` keyword to store local variables and constants.
 
-Unfortunately `let` is not supported in IE so far. To read more about the differences try [this excellent MDN page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let).
+Unfortunately `let` and `const` are not supported by IE so far. To read more about the differences try [this excellent MDN page for `let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) and [this one for `const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const).
 
-If you need to support IE, it is probably safe to replace `let` with `var`. <small>And cope with the unexpected 😈</small>
+If you need to support IE, it is probably safe to replace `let` or `const` with `var`. <small>And cope with the unexpected 😈</small>
 
 ### Anonymous self calling functions
 
@@ -394,3 +396,23 @@ Covered in this lesson
 
 - [Task – handling the global checkbox](https://codepen.io/mulithemuli/pen/gOYgmNK)
 - [Solution](https://codepen.io/mulithemuli/pen/xxKgqvg)
+
+## Chapter three – more tables
+
+In this chapter we will do some more stuff with the table.
+
+### Lesson 1 – group amounts
+
+Based on the selected values in the table we want to display them in groups beneath.
+We already have declared the variables to their proper types (`let` and `const`). The amount table has been updated and now includes an extra column which classifies the amount by a custom type.
+You can play around with the given table and add other types of amounts to create a larger variety of examples. 
+
+Covered in this lesson
+- Creating new DOM elements and adding them
+- Find specific values by DOM traversal
+- Grouping and ordering these values
+
+#### Get to the code
+
+- [Task – create the grouped table](https://codepen.io/mulithemuli/pen/ExxoYMP)
+- [Solution](https://codepen.io/mulithemuli/pen/LYYePwy)
