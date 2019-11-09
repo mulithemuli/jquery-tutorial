@@ -7,7 +7,7 @@ The examples use [Material Design](https://materializecss.com) for styling. This
 
 Each lesson contains a link to the task itself and may provide several solutions. The lessons will remove comments from previous lessons to be more readable. Each solution has an explanation why this approach has been chosen. Comments of previous solutions will be removed in the upcoming tasks and solutions.
 
-Chapters are organized in the subdirectories to make it more easy when cloning this repository for local editing.
+Chapters are organised in the subdirectories to make it more easy when cloning this repository for local editing.
 
 ### Table of contents
 
