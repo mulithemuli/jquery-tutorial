@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.1 – Solution #2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.1 – Solution #2</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-1--attaching-the-event-handlers" target="_blank">Attaching the event handlers</a>
+    </h2>
+    <h3>Comes in handy</h3>
+    <ul class="collection">
+        <li class="collection-item"><a href="https://github.com/mulithemuli/jquery-tutorial#functions-and-arrow-functions" target="_blank">Preflight / functions and arrow functions</a></li>
+        <li class="collection-item"><a href="https://github.com/mulithemuli/jquery-tutorial#event-handlers" target="_blank">Preflight / Event handlers</a></li>
+    </ul>
+    <p>Write a script with jQuery which takes the entered text and prints it in a span below on button click.</p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">jQuery Selectors</li>
+        <li class="collection-item">jQuery Event handling</li>
+        <li class="collection-item">basic DOM manipulation</li>
+    </ul>
+    <blockquote>
+        It is allowed to add tags, IDs or classes. Although the existing ones must be preserved. The solution is
+        possible without doing that.
+    </blockquote>
+    <h3>Solution</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/pozEPGd" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text"></span>
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text"></span>
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <h3>Thoughts on the solution</h3>
+    <p>
+        This solution uses the jQuery <a href="https://api.jquery.com/siblings/" target="_blank">.siblings()</a>
+        function to find the input and the text output fields. You can see the usage of filtering selectors to the
+        siblings as well. Those restrictions work like normal jQuery selectors but always on the context of the
+        element where the function is called.
+    </p>
+    <p>
+        It is a nice approach but only works when the text output is actually a sibling of the clicked button.
+        The advantage to the <a href="https://codepen.io/mulithemuli/pen/yLBaMem" target="_blank">first solution</a>
+        is that we could add an additional input with the same markup and it will work without changing the script.
+        But if the text is anywhere else but a sibling of the button it won't work anymore.
+    </p>
+    <ul class="collection">
+        <li class="collection-header">
+            <h5>What have we done to make it work?</h5>
+        </li>
+        <li class="collection-item">Attaching the event handler to every button</li>
+        <li class="collection-item">Fetching the value of the input which is a sibling to the button</li>
+        <li class="collection-item">Writing the value to the <code>span.helper-text</code> which is a sibling of the button</li>
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
