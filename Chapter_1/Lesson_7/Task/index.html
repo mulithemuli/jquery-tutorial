@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.7 – Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.7 – Task</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-7--making-a-jquery-plugin" target="_blank">Making a jQuery plugin</a>
+    </h2>
+    <h3>Comes in handy</h3>
+    <ul class="collection">
+        <li class="collection-item"><a href="https://github.com/mulithemuli/jquery-tutorial#anonymous-self-calling-functions" target="_blank">Preflight / anonymous self calling functions</a></li>
+    </ul>
+    <p>
+        Is it a solution which can be used by more than just us? To make it more convenient for the users we would
+        like to create a jQuery plugin which does all this covered before. This is a very basic jQuery plugin without
+        options or methods to call. It just explains the basics. Making more advanced plugins will be covered in later
+        lessons.
+    </p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">basic jQuery Plugin creation</li>
+        <li class="collection-item">anonymous self calling functions</li>
+    </ul>
+    <h3>Task</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/ZEzBzPv" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times updated: <span class="times-clicked">0</span></p>
+    <button id="reload_simulator" type="button" class="btn waves-effect waves-light">Reload second Text #2</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
