@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.5 – Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.5 – Solution</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-5--reusability--marker-class" target="_blank">Reusability / marker class</a>
+    </h2>
+    <h3>Comes in handy</h3>
+    <ul class="collection">
+        <li class="collection-item"><a href="https://github.com/mulithemuli/jquery-tutorial#functions-and-arrow-functions" target="_blank">Preflight / functions and arrow functions</a></li>
+    </ul>
+    <p>
+        Currently every button will be selected. It either does something since the container matches or it does
+        nothing when the container does not contain the correct elements. So we would like to add some marker class
+        to take control if the delegation and action should be added or not.
+    </p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">marker classes</li>
+        <li class="collection-item">event delegation</li>
+        <li class="collection-item">jQuery <a href="" target="_blank"><code>.each()</code></a> function</li>
+    </ul>
+    <h3>Solution</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/NWKRZOY" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_3" type="text">
+                <label for="text_3">Text #3</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #3</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times updated: <span class="times-clicked">0</span></p>
+    <h3>Thoughts on the solution</h3>
+    <p>
+        This solution reduces the usage of jQuery initializations (i.e. finding the corresponding row) inside the
+        event handlers.
+    </p>
+    <p>
+        When we think of our script as a part of a framework the users of the framework are able to choose on which
+        blocks the functionality should be added. As we see in our demonstration, the container of the additional
+        third text does not have the marker class and therefore the functionality is not applied.
+    </p>
+    <p>
+        Of course the enabled blocks need to fulfill some structural requirements in markup terms.
+    </p>
+    <p>
+        In that approach we use the <a href="https://api.jquery.com/each/" target="_blank"><code>.each()</code></a>
+        function of jQuery. It iterates over every selected element. Inside the handling function the element will
+        be used as the selection context inside.
+    </p>
+    <p>
+        The advantages to the previous approaches is that we can control which elements will be initialized with
+        our functionality. As well as the reduction of the jQuery selections inside the event handlers since we
+        use our container element (i.e. the <code>div.autoclick</code>) as selection context.
+    </p>
+    <ul class="collection">
+        <li class="collection-header">
+            <h5>What have we done to make it work?</h5>
+        </li>
+        <li class="collection-item">Adding the <code>autoclick</code> class to the container</li>
+        <li class="collection-item">Selecting all <code>.autoclick</code> elements in the page</li>
+        <li class="collection-item">Iterating over them and applying our functionality to the items inside</li>
+        <li class="collection-item">Replacing the relative selection contexts with our container element</li>
+        <li class="collection-item">Removing the event argument in our handlers since it is unused after replacing selectors with the container element</li>
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
