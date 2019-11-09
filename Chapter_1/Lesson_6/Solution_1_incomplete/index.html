@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.6 – Solution #1 (incomplete)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.6 – Solution #1 (incomplete)</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-6--reusability--only-once" target="_blank">Reusability / only once</a>
+    </h2>
+    <p>
+        We can now select specific sections of the page to be handled as we like. But what if the DOM gets updated by
+        an event like an AJAX call? The new DOM should get the same event handling as the other parts but the existing
+        parts should not get the same events attached twice.
+    </p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">remember marker classes</li>
+        <li class="collection-item">using the jQuery <a href="https://api.jquery.com/not/" target="_blank"><code>.not()</code></a> filter</li>
+    </ul>
+    <h3>Solution #1 (incomplete)</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/xxKEvyd" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times updated: <span class="times-clicked">0</span></p>
+    <p>Number of times triggered: <span class="times-triggered">0</span></p>
+    <button id="reload_simulator" type="button" class="btn waves-effect waves-light">Reload second Text #2</button>
+    <h3>Thoughts on the solution</h3>
+    <p>
+        This solution reacts to dom updates and re-initializes the autoclick functionality. Usually this would happen
+        in your ajax callback function.
+    </p>
+    <p>
+        We have moved the autoclick initialization to a separate function to call it later on. But this solution is
+        not very good and should not be used that way.
+    </p>
+    <p>
+        You may have noticed that we have added a "Number of times triggered" output. This demonstrates that calling
+        the <code>enableAutoclick</code> function will apply all the handlers to every <code>.autoclick</code> on
+        this page. So it is fine for the second text which will get updated. But the first text fires the events
+        multiple times: the change event is applied twice as well as the click event on the button. Which means:
+        one change fires the two click events on the button. And the change fires twice.
+    </p>
+    <p>
+        As we can see the fired events multiply exponentially. So there will be no "What have we done to make it
+        work?" section since the solution is inacceptable. We need to remember which elements already use our
+        functionality.
+    </p>
+    <p>
+        Try to improve it by yourself or see it in <a href="https://codepen.io/mulithemuli/pen/wvwowra"> Solution #2.</a>
+    </p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.6 – Solution #2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.6 – Solution #2</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-6--reusability--only-once" target="_blank">Reusability / only once</a>
+    </h2>
+    <p>
+        We can now select specific sections of the page to be handled as we like. But what if the DOM gets updated by
+        an event like an AJAX call? The new DOM should get the same event handling as the other parts but the existing
+        parts should not get the same events attached twice.
+    </p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">remember marker classes</li>
+        <li class="collection-item">using the jQuery <a href="https://api.jquery.com/not/" target="_blank"><code>.not()</code></a> filter</li>
+    </ul>
+    <h3>Solution</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/wvwowra" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row autoclick">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times updated: <span class="times-clicked">0</span></p>
+    <p>Number of times triggered: <span class="times-triggered">0</span></p>
+    <button id="reload_simulator" type="button" class="btn waves-effect waves-light">Reload second Text #2</button>
+    <h3>Thoughts on the solution</h3>
+    <p>
+        This solution reacts to dom updates and re-initializes the autoclick functionality. Usually this would happen
+        in your ajax callback function.
+    </p>
+    <p>
+        It has the advantage that we can reuse our initialization and apply it after dom modifications have been made.
+    </p>
+    <p>
+        We have moved the autoclick initialization to a separate function to call it later on. As we can see the
+        <code>.autoclick</code> selection filters all elements where <code>.autoclick-enabled</code> is present
+        with the jQuery <a href="https://api.jquery.com/not/" target="_blank"><code>.not()</code></a>. This class
+        will be added after our functionality has been initialized.
+    </p>
+    <p>
+        So the functionality will not be added to elements where the method has already been called on. The result is
+        that our times triggered counter won't increase exponentially.
+    </p>
+    <ul class="collection">
+        <li class="collection-header">
+            <h5>What have we done to make it work?</h5>
+        </li>
+        <li class="collection-item">Moving our initialization to a separate function</li>
+        <li class="collection-item">Filtering the elements by a class which is added after initialization</li>
+        <li class="collection-item">Calling the function on load</li>
+        <li class="collection-item">Calling the function after a DOM update</li>
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
