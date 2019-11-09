@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.3 – Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.3 – Solution</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-3--improving-the-counter" target="_blank">Improving the counter</a>
+    </h2>
+    <p>Only updating the number of counts when the text actually has changed.</p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">typesafe comparisons</li>
+    </ul>
+    <blockquote>
+        The change will be determined as previously but we need to check if the text has been changed.
+    </blockquote>
+    <h3>Solution</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/VwZKWOp" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times updated: <span class="times-clicked">0</span></p>
+    <h3>Thoughts on the solution</h3>
+    <p>
+        This solution retrieves the current text and compares it to the text entered. Only when it has been changed
+        the counter increase and the update will be executed.
+    </p>
+    <p>
+        This approach uses the comparison by <code>!==</code> which compares typesafe. When <code>1 == '1'</code>
+        will result in true <code>1 === '1'</code> would result in false since one is a number and the other one is a
+        string. In that case it wouldn't matter since both variables are strings. But it is always safe to compare
+        typesafe. The same comparison rule applies to the negation (<code>!=</code> versus <code>!==</code>).
+    </p>
+    <p>
+        The advantages to the
+        <a href="https://codepen.io/mulithemuli/pen/bGbwROK" target="_blank">previous solution</a> is that the update
+        of the DOM will only be made when an actual change has been made.
+    </p>
+    <ul class="collection">
+        <li class="collection-header">
+            <h5>What have we done to make it work?</h5>
+        </li>
+        <li class="collection-item">Storing the different texts to local variables</li>
+        <li class="collection-item">Compare the two texts</li>
+        <li class="collection-item">Update only when the texts do not match</li>
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

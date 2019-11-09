@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.3 – Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.3 – Task</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-3--improving-the-counter" target="_blank">Improving the counter</a>
+    </h2>
+    <p>Only updating the number of counts when the text actually has changed.</p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">typesafe comparisons</li>
+    </ul>
+    <blockquote>
+        The change will be determined as previously but we need to check if the text has been changed.
+    </blockquote>
+    <h3>Task</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/vYBXZMZ" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times clicked: <span class="times-clicked">0</span></p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
