@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.4 – Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson one.4 – Solution</h1>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-4--removing-the-buttons" target="_blank">Removing the buttons</a>
+    </h2>
+    <p>
+        The buttons are useful but not necessarily relevant to every user. We would like to hide (but not remove) the
+        buttons and delegate the change of an input to the click of the button.
+    </p>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">event delegation</li>
+        <li class="collection-item">jQuery DOM manipulation</li>
+    </ul>
+    <blockquote>
+        When JavaScript is active we would like to remove the button from the view but trigger its click action when
+        the input has been changed.
+    </blockquote>
+    <h3>Solution</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/XWrjayp" target="_blank">on CodePen</a>
+    </p>
+    <form>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_1" type="text">
+                <label for="text_1">Text #1</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #1</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="text_2" type="text">
+                <label for="text_2">Text #2</label>
+                <span class="helper-text">You have typed: <span class="typed-text"></span></span>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="button">Show Text #2</button>
+            </div>
+        </div>
+    </form>
+    <p>Number of times updated: <span class="times-clicked">0</span></p>
+    <h3>Thoughts on the solution</h3>
+    <p>
+        This solution adds a listener to the input text which triggers the click of the button which has been hidden.
+    </p>
+    <p>
+        In that approach we use the <a href="https://api.jquery.com/trigger/" target="_blank">.trigger()</a> function
+        of jQuery. The change does not require a separate click but is automated. Although the event listener needs
+        to be attached at separate points. We use the context aware selector to find the corresponding button.
+    </p>
+    <p>
+        The advantages to the previous approaches is that we do not need to click the button anymore and the update
+        is done automatically. Since the button will be hidden by javascript and hidden afterwards it still will
+        work when something in the selection goes wrong.
+    </p>
+    <ul class="collection">
+        <li class="collection-header">
+            <h5>What have we done to make it work?</h5>
+        </li>
+        <li class="collection-item">Adding a change event handler to the <code>input</code></li>
+        <li class="collection-item">Calling (triggering) the event of the corresponding button</li>
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
