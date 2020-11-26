@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Tutorial Lesson one.1 – Solution #1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>jQuery Tutorial Lesson two.2 – Task</h1>
+    <p>
+        When the checkbox of the inner table is enabled we want to enable the input field and write the amount of the
+        row to it. This solution uses the event delegation to add the event listener not to every checkbox but only once
+        to the table and delegate the event to the changed checkbox.
+    </p>
+    <h2>
+        <a href="https://github.com/mulithemuli/jquery-tutorial#lesson-2--enabling-the-inputs" target="_blank">Enabling the inputs</a>
+    </h2>
+    <h3>Comes in handy</h3>
+    <ul>
+        <li><a href="https://github.com/mulithemuli/jquery-tutorial#event-delegation" target="_blank">Preflight / event delegation</a></li>
+    </ul>
+    <h3>Covered in this Lesson</h3>
+    <ul class="collection">
+        <li class="collection-item">Performing actions on checkbox changes</li>
+        <li class="collection-item">Reading and writing values</li>
+        <li class="collection-item">Event delegation</li>
+    </ul>
+    <h3>Task</h3>
+    <p>
+        <a href="https://codepen.io/mulithemuli/pen/WNeovwb" target="_blank">on CodePen</a>
+    </p>
+    <p>Total amount: <span class="total-amount">0,00</span> €</p>
+    <table class="striped amount-table">
+        <thead>
+        <tr>
+            <th>
+                <label>
+                    <input type="checkbox" class="filled-in all-selector">
+                    <span class="sr-only">Select / Deselect all</span>
+                </label>
+            </th>
+            <th>Amount</th>
+            <th>Positions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <label>
+                    <input type="checkbox" class="filled-in" id="checkbox_1">
+                    <span class="sr-only">Select all in row</span>
+                </label>
+            </td>
+            <td><label for="checkbox_1">500,00 €</label></td>
+            <td>
+                <table class="striped">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_1_1">
+                                <span class="sr-only">Select 100,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_1_1">
+                                <span class="amount">100,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_1_2">
+                                <span class="sr-only">Select 200,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_1_2">
+                                <span class="amount">200,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_1_3">
+                                <span class="sr-only">Select 200,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_1_3">
+                                <span class="amount">200,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type="checkbox" class="filled-in" id="checkbox_2">
+                    <span class="sr-only">Select all in row</span>
+                </label>
+            </td>
+            <td><label for="checkbox_2">12.014,78 €</label></td>
+            <td>
+                <table class="striped">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_2_1">
+                                <span class="sr-only">Select 100,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_2_1">
+                                <span class="amount">100,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_2_2">
+                                <span class="sr-only">Select 200,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_2_2">
+                                <span class="amount">200,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_2_3">
+                                <span class="sr-only">Select 200,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_2_3">
+                                <span class="amount">200,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_2_4">
+                                <span class="sr-only">Select 1.000,00 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_2_4">
+                                <span class="amount">1.000,00</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" class="filled-in" id="checkbox_2_5">
+                                <span class="sr-only">Select 10.514,78 €</span>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="checkbox_2_5">
+                                <span class="amount">10.514,78</span> €
+                            </label>
+                        </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha384-ZOED+d9HxogEQwD+jFvux96iGQR9TxfJO+mPF2ZS0TuKH6eWrmvPsDpO6I0OWdiX" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
